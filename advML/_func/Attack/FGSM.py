@@ -7,8 +7,8 @@ def FGSM(model,input,lable,epsilon):
         assert isinstance(input,Tensor),'Input should be a Tensor'
         assert isinstance(lable,Tensor),'Lable should be a Tensor'
         return FGSM_pytorch(model,input,lable,epsilon)
-    return
-
+    else:
+        assert 0>1,"The deep package is unsupported!"    
 def FGSM_pytorch(model,input,lable,epsilon):
     import torch.nn as nn
     import torch
